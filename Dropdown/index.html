@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="drop" id="drop" onchange="getSelectedValue()">
+  <option value="">Select a manufacturer</option>
+  <option value="Samsung">Samsung</option>
+  <option value="Apple">Apple</option>
+  <option value="Sony">Sony</option>
+</select>
+
+<script>
+  // Function to get the selected value
+  function getSelectedValue() {
+    var drop = document.getElementById("drop");
+    var selectedValue = drop.value;
+    console.log(selectedValue);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events by using | Forms</title>
+    <style>
+        #getInput {
+            text-align: center;
+            color: #8142f2;
+        }
+        .main {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main">Events by using forms</h1>
+<hr>
+    <h2 id="getInput">First we learn a builtin events of html</h2>
+
+    <h3 onmouseover="this.style.color='lightblue'" onmouseleave="changeColor()" class="main" id="ccolor"> This is built in events </h3>
+
+    <hr>
+    <h2 id="getInput">Now the time is to discuss forms and input fields</h2>
+
+    
+
+        <!-- <label for="file"> Image field </label>
+        <input type="file" name="" id="file" value="This is for select file"> 
+        <label for="color"> color field </label>
+        <input type="color" name="" id="color" value="This is for select colors"> 
+        <br><br><br>
+        <label for="date"> date field </label>
+        <input type="datetime-local" name="" id="date" value="This is for datetime"> 
+        <br><br><br> -->
+        
+        
+        <hr>
+    <h2 id="getInput">Now the time is to validate our form</h2>
+
+    <hr>
+    <h2 id="getInput">Now the time is to validate our form with some pattern</h2>
+        <!-- This is for work -->
+
+        <!-- When i submit a form browser reload automatically as a result no values will be store -->
+        <form onsubmit="getValues(event)">
+        <label for="simple"> Enter your name : </label>
+        <input type="text" name="" id="simple" placeholder="This is for text" title="Please enter name only 10 characters" required pattern="[a-z]{10}"> 
+        <br><br>
+        <label for="email">Email :
+            <input type="email" name="" id="email" placeholder="Enter your email" required>
+        </label>
+        <br><br>
+        <label for="password">Password :
+            <input type="password" name="" id="password" placeholder="Enter your password" required pattern="[0-9]{8}">
+        </label>
+        <input type="submit" value=" Submit ">
+    </form>
+
+    <script>
+        function changeColor() {
+            var ccolor = document.getElementById("ccolor");
+            ccolor.style.color = "red";
+        }
+
+        function getValues(e) {
+            e.preventDefault();
+            alert("Your form is submitted")
+            var name = document.getElementById("simple").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var allRequirments = "Hy "+name+"\nThis is your email :"+email+"\nAnd this is your password :"+password;
+            console.log(allRequirments);
+        }
+    </script>
+</body>
+</html>
